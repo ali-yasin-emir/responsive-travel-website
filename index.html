@@ -27,28 +27,63 @@
     <header class="header" id="header">
       <nav class="nav container">
         <div class="nav__logo"><a href="#">Travel</a></div>
-
         <div class="nav__menu" id="nav__menu">
           <ul class="nav__list">
-            <li class="nav__item"><a href="#home" class="nav__link active__link">Home</a></li>
-            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-            <li class="nav__item"><a href="#popular" class="nav__link">Popular</a></li>
-            <li class="nav__item"><a href="#explore" class="nav__link">Explore</a></li>
+            <li class="nav__item">
+              <a href="#home" class="nav__link active__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="#popular" class="nav__link">Popular</a>
+            </li>
+            <li class="nav__item">
+              <a href="#explore" class="nav__link">Explore</a>
+            </li>
           </ul>
+          <!-- Close button -->
           <div class="nav__close" id="nav__close">
             <i class="ri-close-line"></i>
           </div>
         </div>
-
-        <div class="nav__toggle" id="nav__toggle"><i class="ri-menu-line"></i></i></div>
-
+        <!-- Toggle button -->
+        <div class="nav__toggle" id="nav__toggle">
+          <i class="ri-menu-line"></i>
+        </div>
       </nav>
     </header>
 
     <!--==================== MAIN ====================-->
     <main class="main">
       <!--==================== HOME ====================-->
-      <section class="home section" id="home"></section>
+      <section class="home section" id="home">
+        <div class="home__container container grid">
+          <h2 class="home__subtitle">Welcome To Travel</h2>
+          <h1 class="home__title">Explore <br />The World</h1>
+          <p class="home__description">
+            Live the trips exploring the world, discover paradises, islands,
+            mountains and much more, get your trip now.
+          </p>
+          <a href="#" class="button">
+            Start Your Journey <i class="ri-arrow-right-line"></i>
+          </a>
+          <div class="home__card-list">
+            <div class="home__card-item">
+              <span class="home__card-title">Crotia</span>
+            </div>
+            <div class="home__card-item">
+              <span class="home__card-title">Iceland</span>
+            </div>
+            <div class="home__card-item">
+              <span class="home__card-title">Italy</span>
+            </div>
+            <div class="home__card-item">
+              <span class="home__card-title">Spain</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!--==================== ABOUT ====================-->
       <section class="about section" id="about"></section>

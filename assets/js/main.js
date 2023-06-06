@@ -6,14 +6,12 @@ const navMenu = document.getElementById('nav__menu');
 
 if (navToggle) {
   navToggle.addEventListener('click', () => {
-    navClose.style.display = 'block';
     navMenu.classList.add('show-menu');
   });
 }
 
 if (navClose) {
   navClose.addEventListener('click', () => {
-    navClose.style.display = 'none';
     navMenu.classList.remove('show-menu');
   });
 }

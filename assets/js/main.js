@@ -1,6 +1,5 @@
 /*=============== SHOW MENU ===============*/
 
-const navClose = document.getElementById('nav__close');
 const navToggle = document.getElementById('nav__toggle');
 const navMenu = document.getElementById('nav__menu');
 
@@ -10,23 +9,26 @@ if (navToggle) {
   });
 }
 
+/*=============== REMOVE MENU MOBILE ===============*/
+
+const navClose = document.getElementById('nav__close');
+
 if (navClose) {
   navClose.addEventListener('click', () => {
     navMenu.classList.remove('show-menu');
   });
 }
 
-// const showMenu = () => {
-//   navMenu.classList.add('show-menu');
-// };
-// toggle.addEventListener('click', showMenu);
-
-const close2 = document.getElementById('');
-const close3 = document.getElementById('');
-
-/*=============== REMOVE MENU MOBILE ===============*/
-
 /*=============== ADD BLUR TO HEADER ===============*/
+
+const blurHeader = () => {
+  const header = document.getElementById('header');
+  window.scrollY >= 50
+    ? header.classList.add('blur-header')
+    : header.classList.remove('blur-header');
+};
+
+window.addEventListener('scroll', blurHeader);
 
 /*=============== SHOW SCROLL UP ===============*/
 

@@ -134,7 +134,6 @@ img {
   left: 0;
   width: 100%;
   z-index: var(--z-fixed);
-  background: transparent;
 }
 
 .nav {
@@ -196,6 +195,7 @@ img {
     align-items: center;
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px); /* For Safari */
+    z-index: var(--z-fixed);
   }
 }
 
@@ -206,36 +206,108 @@ img {
 }
 
 /* Add blur to header */
+.blur-header {
+  background-color: transparent;
+}
+
+.blur-header::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 10%, 0.3);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px); /* For Safari */
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 
 /* Active link */
+
+.active__link {
+  color: var(--first-color);
+}
 
 /*=============== HOME ===============*/
 
 .home {
-  background-image: url(/assets/img/home-bg.jpg);
+  background: linear-gradient(hsla(0, 0%, 0%, 0.3), hsla(0, 0%, 0%, 1)),
+    url(/assets/img/home-bg.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .home__container {
+  text-align: center;
+  row-gap: 1.5rem;
+  padding-block: 2rem 5rem;
 }
 
 .home__subtitle {
+  font-size: var(--font-medium);
+  /* I can remove this if it can occur to some problems */
+  margin-bottom: -2rem;
 }
 
 .home__title {
+  font-size: var(--biggest-font-size);
+  font-weight: var();
 }
 
 .home__description {
+  color: var(--title-color);
+}
+
+.button {
+  padding: 1rem 1.5rem;
+  max-width: 14em;
+  justify-self: center;
+  background: transparent;
+  background-color: hsla(0, 0%, 72%, 0.3);
+  backdrop-filter: blur(12px);
+  color: var(--title-color);
+  font-family: var(--second-font);
+  white-space: nowrap;
+  margin-block: 1rem;
 }
 
 .home__card-list {
+  row-gap: 2rem;
+  justify-content: center;
 }
 
 .home__card-item {
+  /* max-width: fit-content; */
+  max-width: 280px;
+  background-color: aliceblue;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.home__card-item .home__card-image {
+  -webkit-transition: 0.5s cubic-bezier(0.13, 0.61, 0.52, 0.9);
+  transition: 0.5s cubic-bezier(0.13, 0.61, 0.52, 0.9);
+}
+
+.home__card-item:hover .home__card-image {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+.home__card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .home__card-title {
+  position: absolute;
+  left: 0.5rem;
+  bottom: 0.25rem;
+  font-weight: var(--font-medium);
+  color: var(--title-color);
 }
 
 /*=============== BUTTON ===============*/

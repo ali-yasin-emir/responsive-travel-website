@@ -284,6 +284,7 @@ img {
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  justify-self: center; /* I can remove this maybe later */
 }
 
 .home__card-item .home__card-image {
@@ -314,7 +315,57 @@ img {
 
 /*=============== ABOUT ===============*/
 
+.about__container {
+  padding-block: 4rem;
+}
+
+.about__image {
+  max-width: 280px;
+  justify-self: center;
+  margin-block: 1rem;
+}
+
+.about__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /*=============== POPULAR ===============*/
+
+.popular__container {
+  justify-content: center;
+}
+
+.popular__card-list {
+  row-gap: 3.2rem;
+}
+.popular__card-item {
+}
+
+.popular__card-image {
+  max-width: 280px;
+}
+
+.popular__card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 0.75rem;
+}
+
+.popular__title,
+.popular__location {
+  display: block;
+}
+
+.popular__title {
+  font-size: var(size);
+  color: var(--title-color);
+}
+
+.popular__location {
+}
 
 /*=============== EXPLORE ===============*/
 

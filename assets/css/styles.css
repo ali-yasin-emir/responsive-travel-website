@@ -92,6 +92,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 img {
@@ -127,9 +128,85 @@ img {
 
 /*=============== HEADER & NAV ===============*/
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--container-color);
+  z-index: var(--z-fixed);
+}
+
+.nav {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline: 2rem;
+}
+
+.nav__logo {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+
+.nav__menu {
+  background-color: var(--text-color-light);
+  width: 100%;
+  top: -1000px;
+  left: 0;
+  position: absolute;
+  /* display: none; */
+  padding: 4rem 0rem;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+}
+
+.nav__link {
+  color: var(--body-color);
+}
+
+.active__link {
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid white;
+}
+
+.nav__toggle {
+  display: none;
+}
+
+.nav__toggle,
+.nav__close {
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: var(--title-color);
+}
+
+.nav__close {
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+  display: none;
+}
+
 /* Navigation for mobile devices */
 
+@media screen and (max-width: 1023px) {
+  .nav__toggle {
+    display: block;
+  }
+}
+
 /* Show menu */
+
+.show-menu {
+  top: 0;
+}
 
 /* Add blur to header */
 

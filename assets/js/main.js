@@ -32,6 +32,15 @@ window.addEventListener('scroll', blurHeader);
 
 /*=============== SHOW SCROLL UP ===============*/
 
+const scrollUpFunc = () => {
+  const scrollUp = document.querySelector('.scroll-up');
+  const scrollY = window.scrollY;
+  console.log(scrollY);
+  scrollY >= 200 ? (scrollUp.id = 'show-scroll') : (scrollUp.id = null);
+};
+
+window.addEventListener('scroll', scrollUpFunc);
+
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/

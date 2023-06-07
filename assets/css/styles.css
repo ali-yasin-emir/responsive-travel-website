@@ -161,7 +161,7 @@ img {
   transition: var(--body-color) 0.4s; */
 }
 
-.active__link {
+.active-link {
   padding-bottom: 0.2rem;
   border-bottom: 2px solid white;
 }

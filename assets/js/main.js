@@ -43,4 +43,29 @@ window.addEventListener('scroll', scrollUpFunc);
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
+const sections = document.querySelectorAll('section[id]');
+
+const scrollActive = () => {
+  const scrollY = window.pageYOffset;
+  sections.forEach((section) => {
+    const root = document.querySelector(':root');
+    const gcs = getComputedStyle(root);
+    const headerHeight = gcs.getPropertyValue('--header-height');
+    const hhArranged = parseFloat(headerHeight) * 16;
+
+    const sectionHeight = section.offsetHeight;
+    const sectionTop = section.offsetTop - hhArranged;
+    const sectionId = section.getAttribute('id');
+    const sectionClass = document.querySelector(
+      '.nav__menu a[href*=' + sectionId + ']'
+    );
+
+    scrollY > sectionTop && scrollY <= sectionTop + sectionHeight
+      ? sectionClass.classList.add('active-link')
+      : sectionClass.classList.remove('active-link');
+  });
+};
+
+window.addEventListener('scroll', scrollActive);
+
 /*=============== SCROLL REVEAL ANIMATION ===============*/

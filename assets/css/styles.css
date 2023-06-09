@@ -320,7 +320,7 @@ img {
 } */
 
 .about__image {
-  max-width: 280px;
+  max-width: 400px;
   justify-self: center;
   margin-block: 1rem;
   overflow: hidden;
@@ -336,7 +336,8 @@ img {
 
 .popular__container {
   justify-content: center;
-  padding-block: 4rem;
+  padding-block: 6rem 0rem;
+  margin-bottom: 3rem;
 }
 
 .popular__card-list {
@@ -347,7 +348,7 @@ img {
 }
 
 .popular__card-image {
-  max-width: 280px;
+  max-width: 320px;
   overflow: hidden;
 }
 
@@ -374,12 +375,12 @@ img {
 /*=============== EXPLORE ===============*/
 
 .explore__container {
-  padding-block: 3rem 9rem;
+  padding-block: 4rem 0rem;
+  margin-bottom: 4rem;
 }
 
 .explore__image {
   position: relative;
-  transform: scale();
 }
 .explore__img {
   width: 100%;
@@ -411,7 +412,7 @@ img {
 }
 
 .explore__author {
-  margin-block: 2rem;
+  margin-block: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -433,7 +434,7 @@ img {
 /*=============== JOIN ===============*/
 
 .join__container {
-  padding-block: 0rem 7rem;
+  padding-block: 5rem 4rem;
   justify-content: center;
 }
 .join__description {
@@ -633,7 +634,7 @@ img {
   }
 
   .about__container {
-    padding-block: 10rem 2rem;
+    padding-block: 6rem 2rem;
   }
 
   .home__container {
@@ -655,6 +656,12 @@ img {
     column-gap: 2rem;
     grid-template-columns: repeat(4, 1fr);
     margin-inline: 2rem;
+  }
+
+  .popular__card-list {
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    column-gap: 4rem;
   }
 
   .header {

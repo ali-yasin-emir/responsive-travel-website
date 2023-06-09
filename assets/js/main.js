@@ -69,3 +69,21 @@ const scrollActive = () => {
 window.addEventListener('scroll', scrollActive);
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+
+const sr = ScrollReveal({
+  origin: 'top',
+  distance: '60px',
+  duration: 2500,
+  delay: 250,
+  // reset: true, // Animations repeat
+});
+
+sr.reveal(`.home__subtitle, .home__title, .popular, .explore__image, .join`);
+sr.reveal(`.home__card-list, .explore__data, .footer`, {
+  origin: 'bottom',
+});
+sr.reveal(`.home__button, .home__description`, {
+  origin: 'left',
+});
+sr.reveal(`#about__title, .about__description`, { origin: 'right' });
+sr.reveal(`#about__button, .about__image`, { origin: 'left' });
